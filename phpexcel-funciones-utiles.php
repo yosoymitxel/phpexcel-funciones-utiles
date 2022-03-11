@@ -54,11 +54,7 @@ function dev_excel_cell_text_color(&$objPHPExcel,$posicion,$textColor='FFFFFF',$
 
 //EXCEL Titulo
 function dev_excel_cell_titulo(&$objPHPExcel,$posicion,$valor,$color='',$textColor='',$fontSize=''){
-    //$posicion = count(explode(':',$posicion))>1 ? $posicion : $posicion.':'.$posicion;
-    //DEBsc_var_dump($posicion);
-    //DEBsc_var_dump($fontSize);
-    //DEBsc_var_dump(explode(':',$posicion));
-    $sheet	  = $objPHPExcel->getActiveSheet();
+    $sheet = $objPHPExcel->getActiveSheet();
 
     dev_excel_cell_val ($objPHPExcel,$posicion,$valor,$color,$textColor,true);
 
@@ -88,8 +84,6 @@ function dev_excel_cell_titulo(&$objPHPExcel,$posicion,$valor,$color='',$textCol
 //EXCEL fontSize
 
 function dev_excel_cell_font_size(&$objPHPExcel,$posicion,$fontSize){
-    //$posicion = count(explode(':',$posicion))>0 ? explode(':',$posicion)[0] : $posicion;
-    //DEBsc_var_dump($fontSize);
     $objPHPExcel
         ->getActiveSheet()
         ->getStyle($posicion)
