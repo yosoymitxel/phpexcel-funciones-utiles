@@ -1,10 +1,4 @@
 <?php
-//LIBRERIAS Y CONSTANTES
-sc_include_library("sys", "PHPExcel", "PHPExcel.php", true, true);
-define('WHITE','FFFFFF');
-
-
-
 //EXCEL Valor 
 function dev_excel_cell_val(&$objPHPExcel,$posicion,$valor,$color='',$textColor='',$bold=false){
     $posicion = count(explode(':',$posicion))>0 ? explode(':',$posicion)[0] : $posicion;
